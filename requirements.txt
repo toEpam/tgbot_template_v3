@@ -1,0 +1,14 @@
+aiogram==3.3.0
+environs==10.3.0
+redis==5.0.1
+betterlogging~=0.2.1
+
+# # For enabling api:
+# backoff
+# ujson
+# yarl
+
+# # For PostgreSQL sqlalchemy + alembic:
+sqlalchemy==2.0.25
+# alembic~=1.0
+# asyncpg
