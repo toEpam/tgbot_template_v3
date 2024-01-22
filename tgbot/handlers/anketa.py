@@ -3,7 +3,7 @@ from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message
 
-from bot.states.personalData import PersonalData
+from tgbot.states.personalData import PersonalData
 
 state_router = Router()
 
