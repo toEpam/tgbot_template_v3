@@ -6,6 +6,13 @@ async def set_commands(bot: Bot):
     commands_list = [
         ["start", "Launch the bot"],
         ["help", "Help"],
+        ["set_photo", "Guruh rasmini o'zgartirish"],
+        ["set_title", "Guruh nomini o'zgartirish "],
+        ["set_description", "Guruh haqidagi ma'lumotni o'zgatirish"],
+        ["ro", "Foydalanuvchini Read Only (RO] rejimga o'tkazish"],
+        ["unro", "RO rejimdan chiqarish"],
+        ["ban", "Ban"],
+        ["unban", "Bandan chiqarish"],
     ]
     commands = [
         BotCommand(
