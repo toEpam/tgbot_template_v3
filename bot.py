@@ -1,10 +1,14 @@
 import asyncio
 import logging
+from pathlib import Path
 
 import betterlogging as bl
 from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.fsm.storage.redis import RedisStorage, DefaultKeyBuilder
+from aiogram.utils.i18n import I18n, SimpleI18nMiddleware
+from aiogram_i18n import I18nMiddleware
+from aiogram_i18n.cores import FluentRuntimeCore
 
 from tgbot.config import load_config, Config
 from tgbot.handlers import routers_list
@@ -90,9 +94,20 @@ async def main():
     dp = Dispatcher(storage=storage)
 
     dp.include_routers(*routers_list)
-
     register_global_middlewares(dp, config)
     admins = config.tg_bot.admin_ids
+
+    # LOCALES = Path(__file__).parent / 'locales'
+    # i18n = I18n(path=LOCALES, default_locale='ru')
+    # i18n_instance = SimpleI18nMiddleware(i18n)
+    # i18n_instance.setup(dp)
+
+    i18n_middleware = I18nMiddleware(
+        core=FluentRuntimeCore(
+            path="locales/{locale}/LC_MESSAGES"
+        )
+    )
+    i18n_middleware.setup(dispatcher=dp)
 
     await set_commands(bot)
     await on_startup_notify(bot, admins)

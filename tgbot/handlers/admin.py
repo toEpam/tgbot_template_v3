@@ -1,7 +1,8 @@
 from aiogram import Router
 from aiogram.filters import CommandStart
 from aiogram.types import Message
-
+from aiogram.utils.i18n import gettext as _
+from aiogram_i18n import I18nContext
 from tgbot.filters.admin import AdminFilter
 
 admin_router = Router()
@@ -10,4 +11,4 @@ admin_router.message.filter(AdminFilter())
 
 @admin_router.message(CommandStart())
 async def admin_start(message: Message):
-    await message.reply("Hello admin!")
+    await message.answer(_("Hello admin!"))
