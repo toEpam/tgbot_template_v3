@@ -2,6 +2,7 @@ from aiogram import Router
 from aiogram.filters import CommandStart
 from aiogram.types import Message
 
+from tgbot import config
 from tgbot.filters.admin import AdminFilter
 
 admin_router = Router()

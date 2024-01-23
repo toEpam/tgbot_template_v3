@@ -88,11 +88,16 @@ async def main():
 
     bot = Bot(token=config.tg_bot.token, parse_mode="HTML")
     dp = Dispatcher(storage=storage)
+    db = Database()
 
     dp.include_routers(*routers_list)
 
     register_global_middlewares(dp, config)
     admins = config.tg_bot.admin_ids
+
+    await db.create()
+    # await db.drop_users()
+    await db.create_table_users()
 
     await set_commands(bot)
     await on_startup_notify(bot, admins)
