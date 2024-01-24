@@ -1,0 +1,53 @@
+# Russian translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-01-24 03:46+0500\n"
+"PO-Revision-Date: 2024-01-24 03:49+0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.13.1\n"
+
+#: tgbot/handlers/admin.py:14
+msgid "Hello admin!"
+msgstr "Привет, администратор!"
+
+#: tgbot/handlers/echo.py:14
+msgid "Echo without state."
+msgstr "Эхо без состояния."
+
+#: tgbot/handlers/echo.py:14
+msgid "Message:"
+msgstr "Сообщение:"
+
+#: tgbot/handlers/echo.py:23
+msgid "Echo in state {state_name}"
+msgstr "Эхо в состоянии {state_name}"
+
+#: tgbot/handlers/echo.py:24
+msgid "Message content:"
+msgstr "Содержимое сообщения:"
+
+#: tgbot/handlers/echo.py:27
+msgid "{text}"
+msgstr "{text}"
+
+#: tgbot/handlers/set_lang.py:11
+msgid "Language changed successfully!"
+msgstr "Язык успешно изменен!"
+
+#: tgbot/handlers/user.py:11
+msgid "Greetings, regular user!"
+msgstr "Привет, пользователь!"
+
